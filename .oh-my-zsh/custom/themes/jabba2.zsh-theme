@@ -143,7 +143,7 @@ _is_dirty() {
 
 _dirty() {
   if _is_dirty; then
-    echo "%{$cDirty%} ✗✗✗%{$reset_color%}"
+    # echo "%{$cDirty%} ✗✗✗%{$reset_color%}"
   fi
 }
 
