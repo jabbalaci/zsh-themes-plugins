@@ -1,6 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 ####################
 # custom PATH mods #
 ####################
@@ -12,6 +9,7 @@ export PATH=$PATH:$HOME/.nimble/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export CUSTOM="$ZSH/custom"
 export DROPBOX=$HOME/Dropbox
 
 # Set name of the theme to load --- if set to "random", it will
@@ -23,7 +21,7 @@ export DROPBOX=$HOME/Dropbox
 # ZSH_THEME="avit"
 # ZSH_THEME="honukai"
 # ZSH_THEME="fox"
-ZSH_THEME="jabba2"
+ZSH_THEME="jabba2"    # 2 rows
 # ZSH_THEME="msdos"
 
 if [[ -f $HOME/LIGHT_BACKGROUND ]]; then
@@ -111,7 +109,7 @@ else
   export EDITOR='nvim'
 fi
 
-export VIEWER="nvim"
+export VIEWER=$EDITOR
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -128,27 +126,17 @@ export VIEWER="nvim"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Jabba's aliases
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
-alias vi=$EDITOR
-alias vim=$EDITOR
-alias d='ls -al'
-alias ll='dirs -v | head -10'
-alias mc='. /usr/lib/mc/mc-wrapper.sh'
-alias p2='python2'
-alias p3='python3'
-alias p='python3'
-alias ipy='ipython'
-alias ed='code .'
-alias ppwd='/bin/pwd'
-alias r='ranger'
-alias n='nnn'
-alias sagi='sudo apt install'    # used to be `sudo apt-get install`
+
+###################
+# Jabba's aliases #
+###################
+local jabba_aliases_file="$CUSTOM/plugins/jabba-aliases/jabba-aliases.plugin.zsh"
+source $jabba_aliases_file
+alias ea="$EDITOR $jabba_aliases_file"    # edit aliases
+
 
 source $DROPBOX/secret/own_api_keys.sh
 
 # https://github.com/zsh-users/zsh-syntax-highlighting<Paste>
 # !!! It must be at the end !!!
-source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
