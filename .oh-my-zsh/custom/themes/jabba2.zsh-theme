@@ -1,6 +1,15 @@
-# Jabba Laci's own zsh theme
+# ----------------
+# Jabba2 ZSH Theme
+# ----------------
 #
-# ideas borrowed from themes mortalscumbag, fishy, half-life, etc.
+# Author: Laszlo Szathmary (Jabba Laci)
+# https://github.com/jabbalaci/zsh-themes-plugins
+#
+# The digit '2' in the name of the theme refers to the fact
+# that this theme produces 2 rows.
+# During the development I took ideas / snippets from other
+# oh-my-zsh themes, e.g. mortalscumbag, fishy, etc.
+#
 
 # use extended color palette if available
 # bold version: %{$terminfo[bold]$turquoise%}
@@ -65,21 +74,7 @@ error_dark="$fg_bold[red]"
 error_light="$fg_bold[red]"
 
 
-if [[ "$JABBA_THEME_MODE" == "dark" ]]; then
-  cTime=$time_dark
-  cClean=$clean_dark
-  cVenv=$venv_dark
-  cNimBracket=$nim_bracket_dark
-  cNimLogo=$nim_logo_dark
-  cRprompt=$rprompt_dark
-  cPromptChar=$prompt_char_dark
-  cBranch=$branch_dark
-  cPwd=$pwd_dark
-  cRealPwd=$real_pwd_dark
-  cDirty=$dirty_dark
-  cError=$dirty_dark
-  cArrowOnLeft=$arrow_on_left_dark
-else
+if [[ "$JABBA_THEME_MODE" == "light" ]]; then
   cTime=$time_light
   cClean=$clean_light
   cVenv=$venv_light
@@ -93,6 +88,20 @@ else
   cDirty=$dirty_light
   cError=$dirty_light
   cArrowOnLeft=$arrow_on_left_light
+else
+  cTime=$time_dark
+  cClean=$clean_dark
+  cVenv=$venv_dark
+  cNimBracket=$nim_bracket_dark
+  cNimLogo=$nim_logo_dark
+  cRprompt=$rprompt_dark
+  cPromptChar=$prompt_char_dark
+  cBranch=$branch_dark
+  cPwd=$pwd_dark
+  cRealPwd=$real_pwd_dark
+  cDirty=$dirty_dark
+  cError=$dirty_dark
+  cArrowOnLeft=$arrow_on_left_dark
 fi
 
 # https://stackoverflow.com/a/8811800/232485

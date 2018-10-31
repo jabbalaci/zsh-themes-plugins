@@ -139,4 +139,4 @@ source $DROPBOX/secret/own_api_keys.sh
 
 # https://github.com/zsh-users/zsh-syntax-highlighting<Paste>
 # !!! It must be at the end !!!
-source $CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source $CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

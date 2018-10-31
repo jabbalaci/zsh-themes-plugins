@@ -36,3 +36,4 @@ alias r='ranger'
 alias n='nnn'
 alias sagi='sudo apt install'    # used to be `sudo apt-get install`
 alias run='chmod u+x'
+alias ez="$EDITOR $HOME/.zshrc"    # edit ~/.zshrc

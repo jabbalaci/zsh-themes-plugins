@@ -1,4 +1,13 @@
-# Jabba Laci's MS-DOS prompt for zsh
+# ----------------
+# MS-DOS ZSH Theme
+# ----------------
+#
+# Author: Laszlo Szathmary (Jabba Laci)
+# https://github.com/jabbalaci/zsh-themes-plugins
+#
+# This is a fun little theme that mimics the DOS prompt
+# from the good old times.
+#
 
 TEXT1=`cat <<EOF
 Starting MS-DOS...
