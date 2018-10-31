@@ -125,6 +125,11 @@ _fishy_collapsed_wd() {
 ')
 }
 
+_short_wd() {
+  # echo "%{$cPwd%}$(_fishy_collapsed_wd)%{$reset_color%}"
+  echo "%{$cPwd%}%c%{$reset_color%}"
+}
+
 _hr() {
   echo $(seq -s= 78 | tr -d '[:digit:]')
 }
@@ -178,7 +183,8 @@ _linked_dir() {
   local pwd=`pwd`
   local ppwd=`/bin/pwd`
   if [ "$pwd" != "$ppwd" ]; then
-    echo "%{$reset_color%} %{$cRealPwd%}→ ${ppwd/$HOME/~}%{$reset_color%}"
+    # echo "%{$reset_color%} %{$cRealPwd%}→ ${ppwd/$HOME/~}%{$reset_color%}"
+    echo "%{$cRealPwd%} →%{$reset_color%}"
   fi
 }
 
@@ -187,6 +193,6 @@ _my_prompt="$"
 
 _ret_status="%(?:%{$cPromptChar%}$_my_prompt%{$reset_color%}:%{$cError%}$_my_prompt%{$reset_color%})"
 
-PROMPT=$'$(_hr)\n%{$cArrowOnLeft%}╭─ %{$reset_color%}$(nim_project_info)$(virtualenv_prompt_info)%{$cTime%}[%D{%H:%M:%S}]%{$reset_color%}$(_branch_name) :: %{$cPwd%}%~$(_linked_dir)%{$reset_color%}\n%{$cArrowOnLeft%}╰─➤ %{$reset_color%}%{$cPwd%}$(_fishy_collapsed_wd)%{$reset_color%}$(_dirty) ${_ret_status} '
+PROMPT=$'$(_hr)\n%{$cArrowOnLeft%}╭─ %{$reset_color%}$(nim_project_info)$(virtualenv_prompt_info)%{$cTime%}[%D{%H:%M:%S}]%{$reset_color%}$(_branch_name) :: %{$cPwd%}%~$(_linked_dir)%{$reset_color%}\n%{$cArrowOnLeft%}╰─➤ %{$reset_color%}$(_short_wd)$(_dirty) ${_ret_status} '
 
 RPROMPT="%{$cRprompt%}[ $(_date) ]%{$reset_color%}"
