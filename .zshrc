@@ -21,7 +21,8 @@ export DROPBOX=$HOME/Dropbox
 # ZSH_THEME="avit"
 # ZSH_THEME="honukai"
 # ZSH_THEME="fox"
-ZSH_THEME="jabba2"    # 2 rows
+ZSH_THEME="jabba1"    # 1 row
+# ZSH_THEME="jabba2"    # 2 rows
 # ZSH_THEME="msdos"
 
 if [[ -f $HOME/LIGHT_BACKGROUND ]]; then
@@ -77,6 +78,9 @@ fi
 # see 'man strftime' for details.
 HIST_STAMPS="yyyy-mm-dd"
 
+HISTSIZE=10000
+SAVEHIST=10000
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -129,9 +133,9 @@ export VIEWER=$EDITOR
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-###################
-# Jabba's aliases #
-###################
+####################
+# Jabba's settings #
+####################
 local jabba_aliases_file="$CUSTOM/plugins/jabba-aliases/jabba-aliases.plugin.zsh"
 source $jabba_aliases_file
 alias ea="$EDITOR $jabba_aliases_file"    # edit aliases

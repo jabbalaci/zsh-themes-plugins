@@ -26,6 +26,7 @@ alias vim=$EDITOR
 alias d='ls -al'
 alias ll='dirs -v | head -10'
 alias mc='. /usr/lib/mc/mc-wrapper.sh'
+alias m='mc'
 alias p2='python2'
 alias p3='python3'
 alias p='python3'

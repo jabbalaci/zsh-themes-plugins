@@ -3,7 +3,7 @@
 Here I collect my ZSH themes and plugins. You can also find here
 my `~/.zshrc` file.
 
-For the themes and plugins, you'll need the excellent [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+For the themes and plugins, you'll need the [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 framework.
 
 ## Jabba2 theme
@@ -42,6 +42,33 @@ then let me know.
 ### Installation
 
 Just copy the file `jabba2.zsh-theme` to your `~/.oh-my-zsh/custom/themes/` folder. The theme
+uses three plugins: `virtualenv` (part of the oh-my-zsh framework), `jabba-venv`
+and `nim-project`. The latter two plugins can be found in this repository. See my
+`.zshrc` file (also in this repo) how to activate the plugins.
+
+## Jabba1 theme
+
+A one-row theme, hence the '1' in the name. This is a simplified version of the jabba2 theme.
+
+### Dark mode (`JABBA_THEME_MODE="dark"`):
+
+<p align="center">
+  <img width="90%" src="assets/jabba1_dark.png">
+</p>
+
+This is the default mode.
+
+### Light mode (`JABBA_THEME_MODE="light"`):
+
+<p align="center">
+  <img width="90%" src="assets/jabba1_light.png">
+</p>
+
+Light mode is also supported.
+
+### Installation
+
+Just copy the file `jabba1.zsh-theme` to your `~/.oh-my-zsh/custom/themes/` folder. The theme
 uses three plugins: `virtualenv` (part of the oh-my-zsh framework), `jabba-venv`
 and `nim-project`. The latter two plugins can be found in this repository. See my
 `.zshrc` file (also in this repo) how to activate the plugins.
