@@ -1,3 +1,9 @@
+**Update (20181104):** I created another repo for my ZSH settings, see here:
+[https://github.com/jabbalaci/jabbas-zsh-settings](https://github.com/jabbalaci/jabbas-zsh-settings).
+That repo is built manually and doesn't use any framework. Future developments will go into
+that repo. I also leave this repo here but it's not likely that it would
+get any updates in the future.
+
 # ZSH Themes & Plugins
 
 Here I collect my ZSH themes and plugins. You can also find here

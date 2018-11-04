@@ -1,10 +1,13 @@
 # activate the virt. env. if Pipfile exists
 _activate_venv() {
-  if [[ "$PIPENV_ACTIVE" != 1 ]]; then
-    if [[ -f Pipfile ]]; then
-      # echo "# activating venv…"
-      source $(pipenv --venv)/bin/activate
-    fi
+  if [[ -n ${VIRTUAL_ENV} ]]; then
+      # echo "# virt. env. is already activated"
+      return
+  fi
+  # else
+  if [[ -f Pipfile ]]; then
+    # echo "# activating venv…"
+    source $(pipenv --venv)/bin/activate
   fi
 }
 

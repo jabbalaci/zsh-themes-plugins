@@ -1,3 +1,7 @@
+# https://wpsuperheroes.com/slow-osx-terminal-oh-my-zsh/
+# zmodload zsh/zprof
+# $ env ZSH_PROF= zsh -ic zprof
+
 ####################
 # custom PATH mods #
 ####################
@@ -78,8 +82,8 @@ fi
 # see 'man strftime' for details.
 HIST_STAMPS="yyyy-mm-dd"
 
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=5000
+SAVEHIST=5000
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder

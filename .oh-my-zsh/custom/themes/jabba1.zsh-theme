@@ -144,3 +144,5 @@ _my_prompt="$"
 _ret_status="%(?:%{$cPromptChar%}$_my_prompt%{$reset_color%}:%{$cError%}$_my_prompt%{$reset_color%})"
 
 PROMPT=$'$(_hr)\n$(nim_project_info)$(virtualenv_prompt_info)%{$cTime%}[%D{%H:%M:%S}]%{$reset_color%} %{$cPwd%}%~%{$reset_color%}$(_branch_name) ${_ret_status} '
+
+RPROMPT="%{$cRprompt%}[ oh-my-zsh ]%{$reset_color%}"
